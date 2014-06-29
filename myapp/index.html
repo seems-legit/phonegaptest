@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+	<title>Test Applet</title>
+</head>
+<body>
+	<button id="pushme">PUSH ME</button>
+	<div id="results"></div>
+	<button id="clearme">clear</button>
+	
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+	<script>
+		$('#pushme').click(function() {
+			$('#results').prepend(new Date().getTime() + "<br>");
+		});
+		$('#clearme').click(function() {
+			$('#results').html('');
+		});
+	</script>
+</body>
+</html>
